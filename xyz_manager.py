@@ -68,7 +68,7 @@ def atomicname_to_Z(Z_atomicname):
 
     Z = np.zeros(len(Z_atomicname), dtype=int)
     for i in range(len(Z_atomicname)):
-        Z[i] = Element_Names[Z_atomicname[i]]
+        Z[i] = Element_Names[(Z_atomicname[i]).strip()]
 
     return Z
 
