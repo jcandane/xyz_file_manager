@@ -64,7 +64,7 @@ def xyz_reader(name, input_unit="Å", output_unit="å", mass=False): #currentlog
     file.close()
 
     if mass == True:
-        m_i = Z_mass(Z)
+        m_i = Z_mass[Z]
         return Z, u * np.stack((x, y, z)).T, m_i
     else:
         return Z, u * np.stack((x, y, z)).T
